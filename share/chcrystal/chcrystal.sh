@@ -40,7 +40,7 @@ function chcrystal_use()
 		export PATH="$CRYSTAL_ROOT/bin:$PATH"
 	fi
 
-	CRYSTAL_VERSION="$("$CRYSTAL_ROOT/bin/crystal" --version 2>/dev/null | head -1 | awk '{print $2}')"
+	CRYSTAL_VERSION="$("$CRYSTAL_ROOT/bin/crystal" --version 2>/dev/null | head -1 | cut -d' ' -f2)"
 	export CRYSTAL_VERSION
 
 	hash -r

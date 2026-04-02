@@ -53,7 +53,7 @@ function test_chcrystal_use_bin_before_embedded_bin()
 
 	# bin/crystal should take precedence over embedded/bin/crystal
 	local crystal_path
-	crystal_path="$(which crystal)"
+	crystal_path="$(command -v crystal)"
 
 	assertEquals "bin/crystal does not take precedence" \
 		     "$mock_crystal_dir/bin/crystal" "$crystal_path"
