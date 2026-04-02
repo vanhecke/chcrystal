@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 unset CRYSTAL_AUTO_VERSION
 
 function chcrystal_auto()
